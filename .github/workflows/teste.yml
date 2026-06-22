@@ -1,0 +1,24 @@
+name: B3 - Teste do Telegram
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  teste:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Baixar o projeto
+        uses: actions/checkout@v4
+      - name: Instalar o Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Instalar as dependencias
+        run: pip install -r requirements.txt
+      - name: Enviar mensagem de teste
+        env:
+          TELEGRAM_ENABLED: "true"
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python main.py teste
