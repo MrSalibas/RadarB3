@@ -1,0 +1,82 @@
+# =========================================================
+# Configuração central do B3 Parity Scanner
+# Edite os valores conforme sua estratégia.
+# =========================================================
+
+app:
+  name: "B3 Parity Scanner"
+  timezone: "America/Sao_Paulo"
+
+data_source:
+  provider: "yfinance"
+  historical_period: "6mo"
+  historical_interval: "1d"
+  intraday_period: "5d"
+  intraday_interval: "5m"
+
+universe:
+  exclude_units: true
+  exclude_fiis: true
+  exclude_etfs: true
+  exclude_bdrs: true
+  pn_suffixes: ["4", "5", "6", "7", "8"]
+  on_suffixes: ["3"]
+
+liquidity:
+  min_avg_daily_volume_brl: 1000000
+  min_trading_days: 60
+  min_data_points: 60
+  max_allowed_spread_pct: 1.0
+  # O yfinance não fornece spread bid/ask histórico confiável.
+  # Por isso o filtro de spread fica DESLIGADO por padrão (apenas estimado/registrado).
+  # Ligue em true se tiver uma fonte de spread melhor.
+  apply_spread_filter: false
+
+strategy:
+  short_window: 20
+  long_window: 60
+  entry_zscore: 2.0
+  exit_zscore: 0.5
+  min_ratio_deviation_pct: 0.5
+  alert_cooldown_minutes: 30
+
+simulation:
+  capital_inicial: 50000
+  usar_lote_fracionario: true
+  lote_padrao: 100
+  corretagem: 0
+  emolumentos_pct: 0.0003
+  slippage_pct: 0.001
+  ganho_minimo_acoes: 1
+  ganho_minimo_pct: 0.1
+  considerar_imposto: true
+  considerar_limite_isencao: true
+
+tax:
+  swing_trade_tax_rate: 0.15
+  day_trade_tax_rate: 0.20
+  monthly_exemption_limit: 20000
+  irrf_swing_trade_pct: 0.00005
+  irrf_day_trade_pct: 0.01
+  prejuizo_acumulado: 0
+
+alerts:
+  telegram_enabled: true
+  rate_limit_seconds: 60
+
+trading:
+  paper_trading: true
+  enable_live_trading: false
+  require_manual_confirmation: true
+
+# Parâmetros do monitor em tempo real aproximado (opcional)
+monitor:
+  refresh_seconds: 60
+  market_open_hour: 10
+  market_close_hour: 18
+  enforce_market_hours: false
+
+paths:
+  data_dir: "data"
+  logs_dir: "logs"
+  cache_dir: "data/cache"

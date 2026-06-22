@@ -1,0 +1,363 @@
+ticker,ticker_yahoo,nome_empresa,empresa_base,final_ticker,tipo_ativo,is_on,is_pn,is_unit,is_fii,is_etf,is_bdr,fonte
+LREN3,LREN3.SA,LOJAS RENNER S.A.,LREN,3,ON,True,False,False,False,False,False,brapi
+PETR4,PETR4.SA,PETROLEO BRASILEIRO S.A. PETROBRAS,PETR,4,PN,False,True,False,False,False,False,brapi
+CSAN3,CSAN3.SA,COSAN S.A.,CSAN,3,ON,True,False,False,False,False,False,brapi
+COGN3,COGN3.SA,COGNA EDUCAÇÃO S.A.,COGN,3,ON,True,False,False,False,False,False,brapi
+SAUD3,SAUD3.SA,SAUD3,SAUD,3,ON,True,False,False,False,False,False,brapi
+CMIG4,CMIG4.SA,CIA ENERGETICA DE MINAS GERAIS - CEMIG,CMIG,4,PN,False,True,False,False,False,False,brapi
+ITUB4,ITUB4.SA,ITAU UNIBANCO HOLDING S.A.,ITUB,4,PN,False,True,False,False,False,False,brapi
+MGLU3,MGLU3.SA,MAGAZINE LUIZA S.A.,MGLU,3,ON,True,False,False,False,False,False,brapi
+CPLE3,CPLE3.SA,CIA PARANAENSE DE ENERGIA - COPEL,CPLE,3,ON,True,False,False,False,False,False,brapi
+ITSA4,ITSA4.SA,ITAUSA S.A.,ITSA,4,PN,False,True,False,False,False,False,brapi
+ABEV3,ABEV3.SA,AMBEV S.A.,ABEV,3,ON,True,False,False,False,False,False,brapi
+ANIM3,ANIM3.SA,ANIMA HOLDING S.A.,ANIM,3,ON,True,False,False,False,False,False,brapi
+BBAS3,BBAS3.SA,BCO BRASIL S.A.,BBAS,3,ON,True,False,False,False,False,False,brapi
+VALE3,VALE3.SA,VALE S.A.,VALE,3,ON,True,False,False,False,False,False,brapi
+DIRR3,DIRR3.SA,DIRECIONAL ENGENHARIA S.A.,DIRR,3,ON,True,False,False,False,False,False,brapi
+BBDC4,BBDC4.SA,BCO BRADESCO S.A.,BBDC,4,PN,False,True,False,False,False,False,brapi
+CSNA3,CSNA3.SA,CIA SIDERURGICA NACIONAL,CSNA,3,ON,True,False,False,False,False,False,brapi
+RADL3,RADL3.SA,RAIA DROGASIL S.A.,RADL,3,ON,True,False,False,False,False,False,brapi
+VAMO3,VAMO3.SA,VAMOS LOCAÇÃO DE CAMINHÕES. MÁQUINAS E EQUIP. S.A.,VAMO,3,ON,True,False,False,False,False,False,brapi
+BEEF3,BEEF3.SA,MINERVA S.A.,BEEF,3,ON,True,False,False,False,False,False,brapi
+SBSP3,SBSP3.SA,CIA SANEAMENTO BASICO EST SAO PAULO,SBSP,3,ON,True,False,False,False,False,False,brapi
+BBSE3,BBSE3.SA,BB SEGURIDADE PARTICIPAÇÕES S.A.,BBSE,3,ON,True,False,False,False,False,False,brapi
+AZZA3,AZZA3.SA,AZZAS 2154 S.A.,AZZA,3,ON,True,False,False,False,False,False,brapi
+ALOS3,ALOS3.SA,ALLOS S.A,ALOS,3,ON,True,False,False,False,False,False,brapi
+BRKM5,BRKM5.SA,BRASKEM S.A.,BRKM,5,PN,False,True,False,False,False,False,brapi
+CVCB3,CVCB3.SA,CVC BRASIL OPERADORA E AGÊNCIA DE VIAGENS S.A.,CVCB,3,ON,True,False,False,False,False,False,brapi
+RAIL3,RAIL3.SA,RUMO S.A.,RAIL,3,ON,True,False,False,False,False,False,brapi
+ASAI3,ASAI3.SA,SENDAS DISTRIBUIDORA S.A.,ASAI,3,ON,True,False,False,False,False,False,brapi
+SMFT3,SMFT3.SA,SMARTFIT ESCOLA DE GINÁSTICA E DANÇA S.A.,SMFT,3,ON,True,False,False,False,False,False,brapi
+NATU3,NATU3.SA,NATURA COSMETICOS S.A.,NATU,3,ON,True,False,False,False,False,False,brapi
+AMBP3,AMBP3.SA,AMBIPAR PARTICIPACOES E EMPREENDIMENTOS S/A,AMBP,3,ON,True,False,False,False,False,False,brapi
+GGBR4,GGBR4.SA,GERDAU S.A.,GGBR,4,PN,False,True,False,False,False,False,brapi
+ONCO3,ONCO3.SA,ONCOCLINICAS DO BRASIL SERVICOS MEDICOS  S.A.,ONCO,3,ON,True,False,False,False,False,False,brapi
+USIM5,USIM5.SA,USINAS SID DE MINAS GERAIS S.A.-USIMINAS,USIM,5,PN,False,True,False,False,False,False,brapi
+CMIN3,CMIN3.SA,CSN MINERAÇÃO S.A.,CMIN,3,ON,True,False,False,False,False,False,brapi
+RENT3,RENT3.SA,LOCALIZA RENT A CAR S.A.,RENT,3,ON,True,False,False,False,False,False,brapi
+CYRE3,CYRE3.SA,CYRELA BRAZIL REALTY S.A.EMPREEND E PART,CYRE,3,ON,True,False,False,False,False,False,brapi
+MOTV3,MOTV3.SA,MOTIVA INFRAESTRUTURA DE MOBILIDADE S.A.,MOTV,3,ON,True,False,False,False,False,False,brapi
+CEAB3,CEAB3.SA,CEA MODAS S.A.,CEAB,3,ON,True,False,False,False,False,False,brapi
+CSMG3,CSMG3.SA,CIA SANEAMENTO DE MINAS GERAIS-COPASA MG,CSMG,3,ON,True,False,False,False,False,False,brapi
+RCSL4,RCSL4.SA,RECRUSUL S.A.,RCSL,4,PN,False,True,False,False,False,False,brapi
+PRIO3,PRIO3.SA,PRIO S.A.,PRIO,3,ON,True,False,False,False,False,False,brapi
+RAIZ4,RAIZ4.SA,RAIZEN S.A.,RAIZ,4,PN,False,True,False,False,False,False,brapi
+GOAU4,GOAU4.SA,METALURGICA GERDAU S.A.,GOAU,4,PN,False,True,False,False,False,False,brapi
+KLBN4,KLBN4.SA,KLABIN S.A.,KLBN,4,PN,False,True,False,False,False,False,brapi
+AXIA3,AXIA3.SA,AXIA3,AXIA,3,ON,True,False,False,False,False,False,brapi
+HAPV3,HAPV3.SA,HAPVIDA PARTICIPACOES E INVESTIMENTOS SA,HAPV,3,ON,True,False,False,False,False,False,brapi
+RAPT4,RAPT4.SA,RANDONCORP S.A.,RAPT,4,PN,False,True,False,False,False,False,brapi
+BBDC3,BBDC3.SA,BCO BRADESCO S.A.,BBDC,3,ON,True,False,False,False,False,False,brapi
+ECOR3,ECOR3.SA,ECORODOVIAS INFRAESTRUTURA E LOGÍSTICA S.A.,ECOR,3,ON,True,False,False,False,False,False,brapi
+PCAR3,PCAR3.SA,CIA BRASILEIRA DE DISTRIBUICAO,PCAR,3,ON,True,False,False,False,False,False,brapi
+EQTL3,EQTL3.SA,EQUATORIAL S.A.,EQTL,3,ON,True,False,False,False,False,False,brapi
+MRVE3,MRVE3.SA,MRV ENGENHARIA E PARTICIPACOES S.A.,MRVE,3,ON,True,False,False,False,False,False,brapi
+POMO4,POMO4.SA,MARCOPOLO S.A.,POMO,4,PN,False,True,False,False,False,False,brapi
+QUAL3,QUAL3.SA,QUALICORP CONSULTORIA E CORRETORA DE SEGUROS S.A.,QUAL,3,ON,True,False,False,False,False,False,brapi
+YDUQ3,YDUQ3.SA,YDUQS PARTICIPACOES S.A.,YDUQ,3,ON,True,False,False,False,False,False,brapi
+TOTS3,TOTS3.SA,TOTVS S.A.,TOTS,3,ON,True,False,False,False,False,False,brapi
+GFSA3,GFSA3.SA,GAFISA S.A.,GFSA,3,ON,True,False,False,False,False,False,brapi
+VBBR3,VBBR3.SA,VIBRA ENERGIA S.A.,VBBR,3,ON,True,False,False,False,False,False,brapi
+PGMN3,PGMN3.SA,EMPREENDIMENTOS PAGUE MENOS S.A.,PGMN,3,ON,True,False,False,False,False,False,brapi
+GMAT3,GMAT3.SA,GRUPO MATEUS S.A.,GMAT,3,ON,True,False,False,False,False,False,brapi
+PETR3,PETR3.SA,PETROLEO BRASILEIRO S.A. PETROBRAS,PETR,3,ON,True,False,False,False,False,False,brapi
+SUZB3,SUZB3.SA,SUZANO S.A.,SUZB,3,ON,True,False,False,False,False,False,brapi
+TIMS3,TIMS3.SA,TIM S.A.,TIMS,3,ON,True,False,False,False,False,False,brapi
+UGPA3,UGPA3.SA,ULTRAPAR PARTICIPACOES S.A.,UGPA,3,ON,True,False,False,False,False,False,brapi
+LWSA3,LWSA3.SA,LWSA S.A.,LWSA,3,ON,True,False,False,False,False,False,brapi
+BRAV3,BRAV3.SA,BRAVA ENERGIA S.A.,BRAV,3,ON,True,False,False,False,False,False,brapi
+MBRF3,MBRF3.SA,MBRF3,MBRF,3,ON,True,False,False,False,False,False,brapi
+VIVA3,VIVA3.SA,VIVARA PARTICIPAÇOES S.A,VIVA,3,ON,True,False,False,False,False,False,brapi
+TEND3,TEND3.SA,CONSTRUTORA TENDA S.A.,TEND,3,ON,True,False,False,False,False,False,brapi
+WEGE3,WEGE3.SA,WEG S.A.,WEGE,3,ON,True,False,False,False,False,False,brapi
+SLCE3,SLCE3.SA,SLC AGRICOLA S.A.,SLCE,3,ON,True,False,False,False,False,False,brapi
+MOVI3,MOVI3.SA,MOVIDA PARTICIPACOES SA,MOVI,3,ON,True,False,False,False,False,False,brapi
+EMBJ3,EMBJ3.SA,EMBJ3,EMBJ,3,ON,True,False,False,False,False,False,brapi
+ENEV3,ENEV3.SA,ENEVA S.A,ENEV,3,ON,True,False,False,False,False,False,brapi
+HYPE3,HYPE3.SA,HYPERA S.A.,HYPE,3,ON,True,False,False,False,False,False,brapi
+CXSE3,CXSE3.SA,CAIXA SEGURIDADE PARTICIPAÇÕES S.A.,CXSE,3,ON,True,False,False,False,False,False,brapi
+BHIA3,BHIA3.SA,GRUPO CASAS BAHIA S.A.,BHIA,3,ON,True,False,False,False,False,False,brapi
+FLRY3,FLRY3.SA,FLEURY S.A.,FLRY,3,ON,True,False,False,False,False,False,brapi
+CURY3,CURY3.SA,CURY CONSTRUTORA E INCORPORADORA S.A.,CURY,3,ON,True,False,False,False,False,False,brapi
+GGPS3,GGPS3.SA,GPS PARTICIPACOES E EMPREENDIMENTOS S.A.,GGPS,3,ON,True,False,False,False,False,False,brapi
+AURE3,AURE3.SA,AUREN ENERGIA S.A.,AURE,3,ON,True,False,False,False,False,False,brapi
+LJQQ3,LJQQ3.SA,LOJAS QUERO-QUERO S/A,LJQQ,3,ON,True,False,False,False,False,False,brapi
+LIGT3,LIGT3.SA,LIGHT S.A.,LIGT,3,ON,True,False,False,False,False,False,brapi
+SIMH3,SIMH3.SA,SIMPAR S.A.,SIMH,3,ON,True,False,False,False,False,False,brapi
+DXCO3,DXCO3.SA,DEXCO S.A.,DXCO,3,ON,True,False,False,False,False,False,brapi
+JHSF3,JHSF3.SA,JHSF PARTICIPACOES S.A.,JHSF,3,ON,True,False,False,False,False,False,brapi
+GRND3,GRND3.SA,GRENDENE S.A.,GRND,3,ON,True,False,False,False,False,False,brapi
+ISAE4,ISAE4.SA,ISA ENERGIA BRASIL S.A,ISAE,4,PN,False,True,False,False,False,False,brapi
+VIVT3,VIVT3.SA,TELEFÔNICA BRASIL S.A,VIVT,3,ON,True,False,False,False,False,False,brapi
+ITUB3,ITUB3.SA,ITAU UNIBANCO HOLDING S.A.,ITUB,3,ON,True,False,False,False,False,False,brapi
+RDOR3,RDOR3.SA,REDE DOR SÃO LUIZ S.A.,RDOR,3,ON,True,False,False,False,False,False,brapi
+POSI3,POSI3.SA,POSITIVO TECNOLOGIA S.A.,POSI,3,ON,True,False,False,False,False,False,brapi
+EVEN3,EVEN3.SA,EVEN CONSTRUTORA E INCORPORADORA S.A.,EVEN,3,ON,True,False,False,False,False,False,brapi
+HBSA3,HBSA3.SA,HIDROVIAS DO BRASIL S.A.,HBSA,3,ON,True,False,False,False,False,False,brapi
+PSSA3,PSSA3.SA,PORTO SEGURO S.A.,PSSA,3,ON,True,False,False,False,False,False,brapi
+EZTC3,EZTC3.SA,EZ TEC EMPREEND. E PARTICIPACOES S.A.,EZTC,3,ON,True,False,False,False,False,False,brapi
+PASS3,PASS3.SA,COMPASS GAS E ENERGIA S.A.,PASS,3,ON,True,False,False,False,False,False,brapi
+MULT3,MULT3.SA,MULTIPLAN - EMPREEND IMOBILIARIOS S.A.,MULT,3,ON,True,False,False,False,False,False,brapi
+RECV3,RECV3.SA,PETRORECÔNCAVO S.A.,RECV,3,ON,True,False,False,False,False,False,brapi
+SBFG3,SBFG3.SA,GRUPO SBF SA,SBFG,3,ON,True,False,False,False,False,False,brapi
+RANI3,RANI3.SA,IRANI PAPEL E EMBALAGEM S.A.,RANI,3,ON,True,False,False,False,False,False,brapi
+AUAU3,AUAU3.SA,UNIÃO PET PARTICIPAÇÕES S.A.,AUAU,3,ON,True,False,False,False,False,False,brapi
+SMTO3,SMTO3.SA,SAO MARTINHO S.A.,SMTO,3,ON,True,False,False,False,False,False,brapi
+BMGB4,BMGB4.SA,BANCO BMG S.A.,BMGB,4,PN,False,True,False,False,False,False,brapi
+BRSR6,BRSR6.SA,BCO ESTADO DO RIO GRANDE DO SUL S.A.,BRSR,6,PN,False,True,False,False,False,False,brapi
+HBOR3,HBOR3.SA,HELBOR EMPREENDIMENTOS S.A.,HBOR,3,ON,True,False,False,False,False,False,brapi
+PLPL3,PLPL3.SA,PLANO & PLANO DESENVOLVIMENTO IMOBILIÁRIO S.A.,PLPL,3,ON,True,False,False,False,False,False,brapi
+PMAM3,PMAM3.SA,PARANAPANEMA S.A.,PMAM,3,ON,True,False,False,False,False,False,brapi
+MLAS3,MLAS3.SA,GRUPO MULTI S.A.,MLAS,3,ON,True,False,False,False,False,False,brapi
+PINE4,PINE4.SA,BCO PINE S.A.,PINE,4,PN,False,True,False,False,False,False,brapi
+SOJA3,SOJA3.SA,BOA SAFRA SEMENTES S.A.,SOJA,3,ON,True,False,False,False,False,False,brapi
+MYPK3,MYPK3.SA,IOCHPE MAXION S.A.,MYPK,3,ON,True,False,False,False,False,False,brapi
+SAPR4,SAPR4.SA,CIA SANEAMENTO DO PARANA - SANEPAR,SAPR,4,PN,False,True,False,False,False,False,brapi
+TUPY3,TUPY3.SA,TUPY S.A.,TUPY,3,ON,True,False,False,False,False,False,brapi
+EGIE3,EGIE3.SA,ENGIE BRASIL ENERGIA S.A.,EGIE,3,ON,True,False,False,False,False,False,brapi
+AMER3,AMER3.SA,AMERICANAS S.A,AMER,3,ON,True,False,False,False,False,False,brapi
+BRAP4,BRAP4.SA,BRADESPAR S.A.,BRAP,4,PN,False,True,False,False,False,False,brapi
+VULC3,VULC3.SA,VULCABRAS S.A.,VULC,3,ON,True,False,False,False,False,False,brapi
+INTB3,INTB3.SA,INTELBRAS S.A. IND DE TELEC ELETRONICA BRASILEIRA,INTB,3,ON,True,False,False,False,False,False,brapi
+KLBN3,KLBN3.SA,KLABIN S.A.,KLBN,3,ON,True,False,False,False,False,False,brapi
+RIAA3,RIAA3.SA,RIAA3,RIAA,3,ON,True,False,False,False,False,False,brapi
+TTEN3,TTEN3.SA,TRÊS TENTOS AGROINDUSTRIAL S/A,TTEN,3,ON,True,False,False,False,False,False,brapi
+POMO3,POMO3.SA,MARCOPOLO S.A.,POMO,3,ON,True,False,False,False,False,False,brapi
+JALL3,JALL3.SA,JALLES MACHADO S.A.,JALL,3,ON,True,False,False,False,False,False,brapi
+ALPA4,ALPA4.SA,ALPARGATAS S.A.,ALPA,4,PN,False,True,False,False,False,False,brapi
+ARML3,ARML3.SA,ARMAC LOCAÇÃO. LOGÍSTICA E SERVIÇOS S.A.,ARML,3,ON,True,False,False,False,False,False,brapi
+KEPL3,KEPL3.SA,KEPLER WEBER S.A.,KEPL,3,ON,True,False,False,False,False,False,brapi
+JSLG3,JSLG3.SA,JSL S.A.,JSLG,3,ON,True,False,False,False,False,False,brapi
+FESA4,FESA4.SA,CIA FERRO LIGAS DA BAHIA - FERBASA,FESA,4,PN,False,True,False,False,False,False,brapi
+CASH3,CASH3.SA,MÉLIUZ S.A.,CASH,3,ON,True,False,False,False,False,False,brapi
+CBAV3,CBAV3.SA,COMPANHIA BRASILEIRA DE ALUMÍNIO,CBAV,3,ON,True,False,False,False,False,False,brapi
+MELK3,MELK3.SA,MELNICK DESENVOLVIMENTO IMOBILIÁRIO S.A.,MELK,3,ON,True,False,False,False,False,False,brapi
+MILS3,MILS3.SA,MILLS LOCAÇÃO. SERVIÇOS E LOGÍSTICA S.A,MILS,3,ON,True,False,False,False,False,False,brapi
+CPFE3,CPFE3.SA,CPFL ENERGIA S.A.,CPFE,3,ON,True,False,False,False,False,False,brapi
+AXIA7,AXIA7.SA,AXIA7,AXIA,7,PN,False,True,False,False,False,False,brapi
+SYNE3,SYNE3.SA,SYN PROP E TECH S.A.,SYNE,3,ON,True,False,False,False,False,False,brapi
+SEER3,SEER3.SA,SER EDUCACIONAL S.A.,SEER,3,ON,True,False,False,False,False,False,brapi
+RENT4,RENT4.SA,LOCALIZA RENT A CAR S.A.,RENT,4,PN,False,True,False,False,False,False,brapi
+PNVL3,PNVL3.SA,DIMED S.A. DISTRIBUIDORA DE MEDICAMENTOS,PNVL,3,ON,True,False,False,False,False,False,brapi
+MDNE3,MDNE3.SA,MOURA DUBEUX ENGENHARIA S/A,MDNE,3,ON,True,False,False,False,False,False,brapi
+TASA4,TASA4.SA,TAURUS ARMAS S.A.,TASA,4,PN,False,True,False,False,False,False,brapi
+MTRE3,MTRE3.SA,MITRE REALTY EMPREENDIMENTOS E PARTICIPAÇÕES S.A.,MTRE,3,ON,True,False,False,False,False,False,brapi
+CAML3,CAML3.SA,CAMIL ALIMENTOS S.A.,CAML,3,ON,True,False,False,False,False,False,brapi
+ENJU3,ENJU3.SA,ENJOEI S.A.,ENJU,3,ON,True,False,False,False,False,False,brapi
+AZEV4,AZEV4.SA,AZEVEDO E TRAVASSOS S.A.,AZEV,4,PN,False,True,False,False,False,False,brapi
+ABCB4,ABCB4.SA,BCO ABC BRASIL S.A.,ABCB,4,PN,False,True,False,False,False,False,brapi
+AZTE3,AZTE3.SA,AZEVEDO & TRAVASSOS ENERGIA S.A.,AZTE,3,ON,True,False,False,False,False,False,brapi
+FIQE3,FIQE3.SA,UNIFIQUE TELECOMUNICAÇÕES S.A.,FIQE,3,ON,True,False,False,False,False,False,brapi
+VVEO3,VVEO3.SA,CM HOSPITALAR S.A.,VVEO,3,ON,True,False,False,False,False,False,brapi
+DASA3,DASA3.SA,DIAGNOSTICOS DA AMERICA S.A.,DASA,3,ON,True,False,False,False,False,False,brapi
+MDIA3,MDIA3.SA,M.DIAS BRANCO S.A. IND COM DE ALIMENTOS,MDIA,3,ON,True,False,False,False,False,False,brapi
+LOGG3,LOGG3.SA,LOG COMMERCIAL PROPERTIES,LOGG,3,ON,True,False,False,False,False,False,brapi
+CSED3,CSED3.SA,CRUZEIRO DO SUL EDUCACIONAL S.A.,CSED,3,ON,True,False,False,False,False,False,brapi
+AMAR3,AMAR3.SA,MARISA LOJAS S.A.,AMAR,3,ON,True,False,False,False,False,False,brapi
+LAVV3,LAVV3.SA,LAVVI EMPREENDIMENTOS IMOBILIÁRIOS S.A.,LAVV,3,ON,True,False,False,False,False,False,brapi
+SEQL3,SEQL3.SA,SEQUOIA LOGISTICA E TRANSPORTES S.A,SEQL,3,ON,True,False,False,False,False,False,brapi
+OPCT3,OPCT3.SA,OCEANPACT SERVICOS MARITIMOS S.A.,OPCT,3,ON,True,False,False,False,False,False,brapi
+LPSB3,LPSB3.SA,LPS BRASIL - CONSULTORIA DE IMOVEIS S.A.,LPSB,3,ON,True,False,False,False,False,False,brapi
+SHUL4,SHUL4.SA,SCHULZ S.A.,SHUL,4,PN,False,True,False,False,False,False,brapi
+OIBR3,OIBR3.SA,OI S.A.,OIBR,3,ON,True,False,False,False,False,False,brapi
+VTRU3,VTRU3.SA,VITRU EDUCAÇÃO S.A,VTRU,3,ON,True,False,False,False,False,False,brapi
+PTBL3,PTBL3.SA,PBG S/A,PTBL,3,ON,True,False,False,False,False,False,brapi
+AZEV3,AZEV3.SA,AZEVEDO E TRAVASSOS S.A.,AZEV,3,ON,True,False,False,False,False,False,brapi
+FRAS3,FRAS3.SA,FRASLE MOBILITY S.A.,FRAS,3,ON,True,False,False,False,False,False,brapi
+BRST3,BRST3.SA,BRISANET SERVIÇOS DE TELECOMUNICAÇÕES S.A.,BRST,3,ON,True,False,False,False,False,False,brapi
+WIZC3,WIZC3.SA,WIZ CO PARTICIPAÇÕES E CORRETAGEM DE SEGUROS S.A.,WIZC,3,ON,True,False,False,False,False,False,brapi
+LAND3,LAND3.SA,TERRA SANTA PROPRIEDADES AGRICOLAS S.A.,LAND,3,ON,True,False,False,False,False,False,brapi
+ALLD3,ALLD3.SA,ALLIED TECNOLOGIA S.A.,ALLD,3,ON,True,False,False,False,False,False,brapi
+DESK3,DESK3.SA,DESKTOP S.A.,DESK,3,ON,True,False,False,False,False,False,brapi
+ORVR3,ORVR3.SA,ORIZON VALORIZACAO DE RESIDUOS S.A.,ORVR,3,ON,True,False,False,False,False,False,brapi
+IRBR3,IRBR3.SA,IRB - BRASIL RESSEGUROS S.A.,IRBR,3,ON,True,False,False,False,False,False,brapi
+PRNR3,PRNR3.SA,PRINER SERVIÇOS INDUSTRIAIS S.A.,PRNR,3,ON,True,False,False,False,False,False,brapi
+USIM3,USIM3.SA,USINAS SID DE MINAS GERAIS S.A.-USIMINAS,USIM,3,ON,True,False,False,False,False,False,brapi
+CYRE4,CYRE4.SA,CYRELA BRAZIL REALTY S.A.EMPREEND E PART,CYRE,4,PN,False,True,False,False,False,False,brapi
+TAEE4,TAEE4.SA,TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.,TAEE,4,PN,False,True,False,False,False,False,brapi
+BLAU3,BLAU3.SA,BLAU FARMACÊUTICA S.A.,BLAU,3,ON,True,False,False,False,False,False,brapi
+TRIS3,TRIS3.SA,TRISUL S.A.,TRIS,3,ON,True,False,False,False,False,False,brapi
+BMOB3,BMOB3.SA,BEMOBI MOBILE TECH S.A.,BMOB,3,ON,True,False,False,False,False,False,brapi
+MEAL3,MEAL3.SA,INTERNATIONAL MEAL COMPANY ALIMENTACAO S.A.,MEAL,3,ON,True,False,False,False,False,False,brapi
+VLID3,VLID3.SA,VALID SOLUÇÕES S.A.,VLID,3,ON,True,False,False,False,False,False,brapi
+TOKY3,TOKY3.SA,TOKY3,TOKY,3,ON,True,False,False,False,False,False,brapi
+ALPK3,ALPK3.SA,ALLPARK EMPREENDIMENTOS PARTICIPACOES SERVICOS S.A,ALPK,3,ON,True,False,False,False,False,False,brapi
+TFCO4,TFCO4.SA,TRACK & FIELD CO S.A.,TFCO,4,PN,False,True,False,False,False,False,brapi
+LEVE3,LEVE3.SA,MAHLE-METAL LEVE S.A.,LEVE,3,ON,True,False,False,False,False,False,brapi
+AZUL3,AZUL3.SA,AZUL S.A.,AZUL,3,ON,True,False,False,False,False,False,brapi
+ROMI3,ROMI3.SA,ROMI S.A.,ROMI,3,ON,True,False,False,False,False,False,brapi
+TGMA3,TGMA3.SA,TEGMA GESTAO LOGISTICA S.A.,TGMA,3,ON,True,False,False,False,False,False,brapi
+BRKM3,BRKM3.SA,BRASKEM S.A.,BRKM,3,ON,True,False,False,False,False,False,brapi
+AGRO3,AGRO3.SA,BRASILAGRO - CIA BRAS DE PROP AGRICOLAS,AGRO,3,ON,True,False,False,False,False,False,brapi
+HBRE3,HBRE3.SA,HBR REALTY EMPREENDIMENTOS IMOBILIARIOS S/A,HBRE,3,ON,True,False,False,False,False,False,brapi
+OBTC3,OBTC3.SA,ORANJEBTC S.A. - EDUCAÇÃO E INVESTIMENTO,OBTC,3,ON,True,False,False,False,False,False,brapi
+MATD3,MATD3.SA,HOSPITAL MATER DEI S/A,MATD,3,ON,True,False,False,False,False,False,brapi
+UNIP6,UNIP6.SA,UNIPAR CARBOCLORO S.A.,UNIP,6,PN,False,True,False,False,False,False,brapi
+IFCM3,IFCM3.SA,INFRACOMMERCE CXAAS S.A.,IFCM,3,ON,True,False,False,False,False,False,brapi
+PFRM3,PFRM3.SA,PROFARMA DISTRIB PROD FARMACEUTICOS S.A.,PFRM,3,ON,True,False,False,False,False,False,brapi
+ITSA3,ITSA3.SA,ITAUSA S.A.,ITSA,3,ON,True,False,False,False,False,False,brapi
+VITT3,VITT3.SA,VITTIA S.A.,VITT,3,ON,True,False,False,False,False,False,brapi
+CMIG3,CMIG3.SA,CIA ENERGETICA DE MINAS GERAIS - CEMIG,CMIG,3,ON,True,False,False,False,False,False,brapi
+AERI3,AERI3.SA,AERIS IND. E COM. DE EQUIP. GERACAO DE ENERGIA S/A,AERI,3,ON,True,False,False,False,False,False,brapi
+ETER3,ETER3.SA,ETERNIT S.A.,ETER,3,ON,True,False,False,False,False,False,brapi
+DEXP3,DEXP3.SA,DEXXOS PARTICIPACOES S.A.,DEXP,3,ON,True,False,False,False,False,False,brapi
+BIOM3,BIOM3.SA,BIOMM S.A.,BIOM,3,ON,True,False,False,False,False,False,brapi
+NGRD3,NGRD3.SA,NEOGRID PARTICIPACOES S.A.,NGRD,3,ON,True,False,False,False,False,False,brapi
+SANB4,SANB4.SA,BCO SANTANDER (BRASIL) S.A.,SANB,4,PN,False,True,False,False,False,False,brapi
+AMOB3,AMOB3.SA,AUTOMOB PARTICIPAÇÕES S.A.,AMOB,3,ON,True,False,False,False,False,False,brapi
+RCSL3,RCSL3.SA,RECRUSUL S.A.,RCSL,3,ON,True,False,False,False,False,False,brapi
+RNEW3,RNEW3.SA,RENOVA ENERGIA S.A.,RNEW,3,ON,True,False,False,False,False,False,brapi
+SAPR3,SAPR3.SA,CIA SANEAMENTO DO PARANA - SANEPAR,SAPR,3,ON,True,False,False,False,False,False,brapi
+TAEE3,TAEE3.SA,TRANSMISSORA ALIANÇA DE ENERGIA ELÉTRICA S.A.,TAEE,3,ON,True,False,False,False,False,False,brapi
+EUCA4,EUCA4.SA,EUCATEX S.A. INDUSTRIA E COMERCIO,EUCA,4,PN,False,True,False,False,False,False,brapi
+WEST3,WEST3.SA,WESTWING COMERCIO VAREJISTA S.A.,WEST,3,ON,True,False,False,False,False,False,brapi
+BSLI3,BSLI3.SA,BRB BCO DE BRASILIA S.A.,BSLI,3,ON,True,False,False,False,False,False,brapi
+TASA3,TASA3.SA,TAURUS ARMAS S.A.,TASA,3,ON,True,False,False,False,False,False,brapi
+GOAU3,GOAU3.SA,METALURGICA GERDAU S.A.,GOAU,3,ON,True,False,False,False,False,False,brapi
+BMEB4,BMEB4.SA,BCO MERCANTIL DO BRASIL S.A.,BMEB,4,PN,False,True,False,False,False,False,brapi
+CSUD3,CSUD3.SA,CSU DIGITAL S.A.,CSUD,3,ON,True,False,False,False,False,False,brapi
+BPAC3,BPAC3.SA,BCO BTG PACTUAL S.A.,BPAC,3,ON,True,False,False,False,False,False,brapi
+TPIS3,TPIS3.SA,TPI - TRIUNFO PARTICIP. E INVEST. S.A.,TPIS,3,ON,True,False,False,False,False,False,brapi
+ESPA3,ESPA3.SA,MPM CORPÓREOS S.A.,ESPA,3,ON,True,False,False,False,False,False,brapi
+SANB3,SANB3.SA,BCO SANTANDER (BRASIL) S.A.,SANB,3,ON,True,False,False,False,False,False,brapi
+DMVF3,DMVF3.SA,D1000 VAREJO FARMA PARTICIPAÇÕES S.A.,DMVF,3,ON,True,False,False,False,False,False,brapi
+RNEW4,RNEW4.SA,RENOVA ENERGIA S.A.,RNEW,4,PN,False,True,False,False,False,False,brapi
+VSTE3,VSTE3.SA,VESTE S.A. ESTILO,VSTE,3,ON,True,False,False,False,False,False,brapi
+BPAC5,BPAC5.SA,BCO BTG PACTUAL S.A.,BPAC,5,PN,False,True,False,False,False,False,brapi
+SHOW3,SHOW3.SA,T4F ENTRETENIMENTO S.A.,SHOW,3,ON,True,False,False,False,False,False,brapi
+TCSA3,TCSA3.SA,TECNISA S.A.,TCSA,3,ON,True,False,False,False,False,False,brapi
+WDCN3,WDCN3.SA,WDCN3,WDCN,3,ON,True,False,False,False,False,False,brapi
+BEES3,BEES3.SA,BANESTES S.A. - BCO EST ESPIRITO SANTO,BEES,3,ON,True,False,False,False,False,False,brapi
+HAGA4,HAGA4.SA,HAGA S.A. INDUSTRIA E COMERCIO,HAGA,4,PN,False,True,False,False,False,False,brapi
+IGTI3,IGTI3.SA,IGUATEMI S.A.,IGTI,3,ON,True,False,False,False,False,False,brapi
+RAPT3,RAPT3.SA,RANDONCORP S.A.,RAPT,3,ON,True,False,False,False,False,False,brapi
+ALUP4,ALUP4.SA,ALUPAR INVESTIMENTO S/A,ALUP,4,PN,False,True,False,False,False,False,brapi
+PDGR3,PDGR3.SA,PDG REALTY S.A. EMPREEND E PARTICIPACOES,PDGR,3,ON,True,False,False,False,False,False,brapi
+BRAP3,BRAP3.SA,BRADESPAR S.A.,BRAP,3,ON,True,False,False,False,False,False,brapi
+AALR3,AALR3.SA,ALLIANÇA SAÚDE E PARTICIPAÇÕES S.A.,AALR,3,ON,True,False,False,False,False,False,brapi
+UCAS3,UCAS3.SA,UNICASA INDÚSTRIA DE MÓVEIS S.A.,UCAS,3,ON,True,False,False,False,False,False,brapi
+COCE5,COCE5.SA,CIA ENERGETICA DO CEARA - COELCE,COCE,5,PN,False,True,False,False,False,False,brapi
+CTAX3,CTAX3.SA,CTAX3,CTAX,3,ON,True,False,False,False,False,False,brapi
+BSLI4,BSLI4.SA,BRB BCO DE BRASILIA S.A.,BSLI,4,PN,False,True,False,False,False,False,brapi
+DOTZ3,DOTZ3.SA,DOTZ S.A.,DOTZ,3,ON,True,False,False,False,False,False,brapi
+CEDO4,CEDO4.SA,CIA FIACAO TECIDOS CEDRO CACHOEIRA,CEDO,4,PN,False,True,False,False,False,False,brapi
+JFEN3,JFEN3.SA,JOAO FORTES ENGENHARIA S.A.,JFEN,3,ON,True,False,False,False,False,False,brapi
+BMEB3,BMEB3.SA,BCO MERCANTIL DO BRASIL S.A.,BMEB,3,ON,True,False,False,False,False,False,brapi
+CEBR6,CEBR6.SA,CIA ENERGETICA DE BRASILIA,CEBR,6,PN,False,True,False,False,False,False,brapi
+AGXY3,AGXY3.SA,AGROGALAXY PARTICIPAÇÕES S.A.,AGXY,3,ON,True,False,False,False,False,False,brapi
+LUPA3,LUPA3.SA,LUPATECH S.A.,LUPA,3,ON,True,False,False,False,False,False,brapi
+OFSA3,OFSA3.SA,OUROFINO S.A.,OFSA,3,ON,True,False,False,False,False,False,brapi
+LOGN3,LOGN3.SA,LOG-IN LOGISTICA INTERMODAL S.A.,LOGN,3,ON,True,False,False,False,False,False,brapi
+PDTC3,PDTC3.SA,PADTEC HOLDING S.A.,PDTC,3,ON,True,False,False,False,False,False,brapi
+BRSR3,BRSR3.SA,BCO ESTADO DO RIO GRANDE DO SUL S.A.,BRSR,3,ON,True,False,False,False,False,False,brapi
+INEP3,INEP3.SA,INEPAR S.A. INDUSTRIA E CONSTRUCOES,INEP,3,ON,True,False,False,False,False,False,brapi
+VIVR3,VIVR3.SA,VIVER INCORPORADORA E CONSTRUTORA S.A.,VIVR,3,ON,True,False,False,False,False,False,brapi
+WHRL4,WHRL4.SA,WHIRLPOOL S.A.,WHRL,4,PN,False,True,False,False,False,False,brapi
+EALT4,EALT4.SA,ELECTRO ACO ALTONA S.A.,EALT,4,PN,False,True,False,False,False,False,brapi
+SCAR3,SCAR3.SA,SAO CARLOS EMPREEND E PARTICIPACOES S.A.,SCAR,3,ON,True,False,False,False,False,False,brapi
+TECN3,TECN3.SA,TECHNOS S.A.,TECN,3,ON,True,False,False,False,False,False,brapi
+EQPA3,EQPA3.SA,EQUATORIAL PARA DISTRIBUIDORA DE ENERGIA S.A.,EQPA,3,ON,True,False,False,False,False,False,brapi
+OIBR4,OIBR4.SA,OI S.A.,OIBR,4,PN,False,True,False,False,False,False,brapi
+TRAD3,TRAD3.SA,TC S.A.,TRAD,3,ON,True,False,False,False,False,False,brapi
+CGRA4,CGRA4.SA,GRAZZIOTIN S.A.,CGRA,4,PN,False,True,False,False,False,False,brapi
+ALUP3,ALUP3.SA,ALUPAR INVESTIMENTO S/A,ALUP,3,ON,True,False,False,False,False,False,brapi
+OSXB3,OSXB3.SA,OSX BRASIL S.A.,OSXB,3,ON,True,False,False,False,False,False,brapi
+MGEL4,MGEL4.SA,MANGELS INDUSTRIAL S.A.,MGEL,4,PN,False,True,False,False,False,False,brapi
+GGBR3,GGBR3.SA,GERDAU S.A.,GGBR,3,ON,True,False,False,False,False,False,brapi
+SNSY5,SNSY5.SA,SANSUY S.A. INDUSTRIA DE PLASTICOS,SNSY,5,PN,False,True,False,False,False,False,brapi
+TELB4,TELB4.SA,TELEC BRASILEIRAS S.A. TELEBRAS,TELB,4,PN,False,True,False,False,False,False,brapi
+BAZA3,BAZA3.SA,BCO AMAZONIA S.A.,BAZA,3,ON,True,False,False,False,False,False,brapi
+MNPR3,MNPR3.SA,MINUPAR PARTICIPACOES S.A.,MNPR,3,ON,True,False,False,False,False,False,brapi
+ENGI4,ENGI4.SA,ENERGISA S.A.,ENGI,4,PN,False,True,False,False,False,False,brapi
+ENGI3,ENGI3.SA,ENERGISA S.A.,ENGI,3,ON,True,False,False,False,False,False,brapi
+BEES4,BEES4.SA,BANESTES S.A. - BCO EST ESPIRITO SANTO,BEES,4,PN,False,True,False,False,False,False,brapi
+INEP4,INEP4.SA,INEPAR S.A. INDUSTRIA E CONSTRUCOES,INEP,4,PN,False,True,False,False,False,False,brapi
+FICT3,FICT3.SA,FICTOR ALIMENTOS S.A,FICT,3,ON,True,False,False,False,False,False,brapi
+LUXM4,LUXM4.SA,TREVISA INVESTIMENTOS S.A.,LUXM,4,PN,False,True,False,False,False,False,brapi
+NUTR3,NUTR3.SA,NUTRIPLANT INDUSTRIA E COMERCIO S.A.,NUTR,3,ON,True,False,False,False,False,False,brapi
+HAGA3,HAGA3.SA,HAGA S.A. INDUSTRIA E COMERCIO,HAGA,3,ON,True,False,False,False,False,False,brapi
+CGRA3,CGRA3.SA,GRAZZIOTIN S.A.,CGRA,3,ON,True,False,False,False,False,False,brapi
+RSUL4,RSUL4.SA,METALURGICA RIOSULENSE S.A.,RSUL,4,PN,False,True,False,False,False,False,brapi
+ISAE3,ISAE3.SA,ISA ENERGIA BRASIL S.A,ISAE,3,ON,True,False,False,False,False,False,brapi
+EPAR3,EPAR3.SA,EMBPAR PARTICIPACOES S.A.,EPAR,3,ON,True,False,False,False,False,False,brapi
+EMAE4,EMAE4.SA,EMAE - EMPRESA METROP.AGUAS ENERGIA S.A.,EMAE,4,PN,False,True,False,False,False,False,brapi
+ENMT3,ENMT3.SA,ENERGISA MATO GROSSO-DISTRIBUIDORA DE ENERGIA S/A,ENMT,3,ON,True,False,False,False,False,False,brapi
+ARND3,ARND3.SA,ARND3,ARND,3,ON,True,False,False,False,False,False,brapi
+UNIP3,UNIP3.SA,UNIPAR CARBOCLORO S.A.,UNIP,3,ON,True,False,False,False,False,False,brapi
+CLSC4,CLSC4.SA,CENTRAIS ELET DE SANTA CATARINA S.A.,CLSC,4,PN,False,True,False,False,False,False,brapi
+CTKA4,CTKA4.SA,KARSTEN S.A.,CTKA,4,PN,False,True,False,False,False,False,brapi
+DOHL4,DOHL4.SA,DOHLER S.A.,DOHL,4,PN,False,True,False,False,False,False,brapi
+CEBR3,CEBR3.SA,CIA ENERGETICA DE BRASILIA,CEBR,3,ON,True,False,False,False,False,False,brapi
+IGTI4,IGTI4.SA,IGUATEMI S.A.,IGTI,4,PN,False,True,False,False,False,False,brapi
+WLMM4,WLMM4.SA,WLM PART. E COMÉRCIO DE MÁQUINAS E VEÍCULOS S.A.,WLMM,4,PN,False,True,False,False,False,False,brapi
+PINE3,PINE3.SA,BCO PINE S.A.,PINE,3,ON,True,False,False,False,False,False,brapi
+NORD3,NORD3.SA,NORDON INDUSTRIAS METALURGICAS S.A.,NORD,3,ON,True,False,False,False,False,False,brapi
+NEXP3,NEXP3.SA,NEXPE PARTICIPAÇÕES S.A,NEXP,3,ON,True,False,False,False,False,False,brapi
+TELB3,TELB3.SA,TELEC BRASILEIRAS S.A. TELEBRAS,TELB,3,ON,True,False,False,False,False,False,brapi
+ATED3,ATED3.SA,ATOM EDUCAÇÃO E EDITORA S.A.,ATED,3,ON,True,False,False,False,False,False,brapi
+ENMT4,ENMT4.SA,ENERGISA MATO GROSSO-DISTRIBUIDORA DE ENERGIA S/A,ENMT,4,PN,False,True,False,False,False,False,brapi
+FHER3,FHER3.SA,FERTILIZANTES HERINGER S.A.,FHER,3,ON,True,False,False,False,False,False,brapi
+MTSA4,MTSA4.SA,METISA METALURGICA TIMBOENSE S.A.,MTSA,4,PN,False,True,False,False,False,False,brapi
+BNBR3,BNBR3.SA,BCO NORDESTE DO BRASIL S.A.,BNBR,3,ON,True,False,False,False,False,False,brapi
+AFLT3,AFLT3.SA,AFLUENTE TRANSMISSÃO DE ENERGIA ELÉTRICA S/A,AFLT,3,ON,True,False,False,False,False,False,brapi
+SNSY3,SNSY3.SA,SANSUY S.A. INDUSTRIA DE PLASTICOS,SNSY,3,ON,True,False,False,False,False,False,brapi
+RPMG3,RPMG3.SA,REFINARIA DE PETROLEOS MANGUINHOS S.A.,RPMG,3,ON,True,False,False,False,False,False,brapi
+GEPA4,GEPA4.SA,RIO PARANAPANEMA ENERGIA S.A.,GEPA,4,PN,False,True,False,False,False,False,brapi
+PATI3,PATI3.SA,PANATLANTICA S.A.,PATI,3,ON,True,False,False,False,False,False,brapi
+GSHP3,GSHP3.SA,GENERAL SHOPPING E OUTLETS DO BRASIL S.A.,GSHP,3,ON,True,False,False,False,False,False,brapi
+CBEE3,CBEE3.SA,AMPLA ENERGIA E SERVICOS S.A.,CBEE,3,ON,True,False,False,False,False,False,brapi
+PLAS3,PLAS3.SA,PLASCAR PARTICIPACOES INDUSTRIAIS S.A.,PLAS,3,ON,True,False,False,False,False,False,brapi
+CEDO3,CEDO3.SA,CIA FIACAO TECIDOS CEDRO CACHOEIRA,CEDO,3,ON,True,False,False,False,False,False,brapi
+HETA4,HETA4.SA,HERCULES S.A. FABRICA DE TALHERES,HETA,4,PN,False,True,False,False,False,False,brapi
+CGAS5,CGAS5.SA,CIA GAS DE SAO PAULO - COMGAS,CGAS,5,PN,False,True,False,False,False,False,brapi
+RPAD5,RPAD5.SA,ALFA HOLDINGS S.A.,RPAD,5,PN,False,True,False,False,False,False,brapi
+CEED3,CEED3.SA,CIA ESTADUAL DE DISTRIB ENER ELET-CEEE-D,CEED,3,ON,True,False,False,False,False,False,brapi
+FESA3,FESA3.SA,CIA FERRO LIGAS DA BAHIA - FERBASA,FESA,3,ON,True,False,False,False,False,False,brapi
+CEBR5,CEBR5.SA,CIA ENERGETICA DE BRASILIA,CEBR,5,PN,False,True,False,False,False,False,brapi
+BGIP4,BGIP4.SA,BCO ESTADO DE SERGIPE S.A. - BANESE,BGIP,4,PN,False,True,False,False,False,False,brapi
+BAUH4,BAUH4.SA,EXCELSIOR ALIMENTOS S.A.,BAUH,4,PN,False,True,False,False,False,False,brapi
+RPAD3,RPAD3.SA,ALFA HOLDINGS S.A.,RPAD,3,ON,True,False,False,False,False,False,brapi
+CRPG5,CRPG5.SA,TRONOX PIGMENTOS DO BRASIL S.A.,CRPG,5,PN,False,True,False,False,False,False,brapi
+REDE3,REDE3.SA,REDE ENERGIA PARTICIPAÇÕES S.A.,REDE,3,ON,True,False,False,False,False,False,brapi
+CAMB3,CAMB3.SA,CAMBUCI S.A.,CAMB,3,ON,True,False,False,False,False,False,brapi
+MNDL3,MNDL3.SA,MUNDIAL S.A. - PRODUTOS DE CONSUMO,MNDL,3,ON,True,False,False,False,False,False,brapi
+CEEB3,CEEB3.SA,CIA ELETRICIDADE EST. DA BAHIA - COELBA,CEEB,3,ON,True,False,False,False,False,False,brapi
+BMIN3,BMIN3.SA,BCO MERCANTIL DE INVESTIMENTOS S.A.,BMIN,3,ON,True,False,False,False,False,False,brapi
+PEAB3,PEAB3.SA,CIA PARTICIPACOES ALIANCA DA BAHIA,PEAB,3,ON,True,False,False,False,False,False,brapi
+JOPA4,JOPA4.SA,JOSAPAR-JOAQUIM OLIVEIRA S.A. - PARTICIP,JOPA,4,PN,False,True,False,False,False,False,brapi
+BDLL4,BDLL4.SA,BARDELLA S.A. INDUSTRIAS MECANICAS,BDLL,4,PN,False,True,False,False,False,False,brapi
+EQPA5,EQPA5.SA,EQUATORIAL PARA DISTRIBUIDORA DE ENERGIA S.A.,EQPA,5,PN,False,True,False,False,False,False,brapi
+BOBR4,BOBR4.SA,BOMBRIL S.A.,BOBR,4,PN,False,True,False,False,False,False,brapi
+PEAB4,PEAB4.SA,CIA PARTICIPACOES ALIANCA DA BAHIA,PEAB,4,PN,False,True,False,False,False,False,brapi
+WHRL3,WHRL3.SA,WHIRLPOOL S.A.,WHRL,3,ON,True,False,False,False,False,False,brapi
+EALT3,EALT3.SA,ELECTRO ACO ALTONA S.A.,EALT,3,ON,True,False,False,False,False,False,brapi
+ALPA3,ALPA3.SA,ALPARGATAS S.A.,ALPA,3,ON,True,False,False,False,False,False,brapi
+CLSC3,CLSC3.SA,CENTRAIS ELET DE SANTA CATARINA S.A.,CLSC,3,ON,True,False,False,False,False,False,brapi
+RVEE3,RVEE3.SA,REVEE S.A.,RVEE,3,ON,True,False,False,False,False,False,brapi
+DEXP4,DEXP4.SA,DEXXOS PARTICIPACOES S.A.,DEXP,4,PN,False,True,False,False,False,False,brapi
+ESTR4,ESTR4.SA,MANUFATURA DE BRINQUEDOS ESTRELA S.A.,ESTR,4,PN,False,True,False,False,False,False,brapi
+UNIP5,UNIP5.SA,UNIPAR CARBOCLORO S.A.,UNIP,5,PN,False,True,False,False,False,False,brapi
+RPAD6,RPAD6.SA,ALFA HOLDINGS S.A.,RPAD,6,PN,False,True,False,False,False,False,brapi
+BDLL3,BDLL3.SA,BARDELLA S.A. INDUSTRIAS MECANICAS,BDLL,3,ON,True,False,False,False,False,False,brapi
+BMIN4,BMIN4.SA,BCO MERCANTIL DE INVESTIMENTOS S.A.,BMIN,4,PN,False,True,False,False,False,False,brapi
+BRKM6,BRKM6.SA,BRASKEM S.A.,BRKM,6,PN,False,True,False,False,False,False,brapi
+BIED3,BIED3.SA,BIOMA EDUCAÇÃO S.A.,BIED,3,ON,True,False,False,False,False,False,brapi
+SOND5,SOND5.SA,SONDOTECNICA ENGENHARIA SOLOS S.A.,SOND,5,PN,False,True,False,False,False,False,brapi
+PATI4,PATI4.SA,PANATLANTICA S.A.,PATI,4,PN,False,True,False,False,False,False,brapi
+BRSR5,BRSR5.SA,BCO ESTADO DO RIO GRANDE DO SUL S.A.,BRSR,5,PN,False,True,False,False,False,False,brapi
+HOOT4,HOOT4.SA,HOTEIS OTHON S.A.,HOOT,4,PN,False,True,False,False,False,False,brapi
+CEGR3,CEGR3.SA,CIA DISTRIB DE GAS DO RIO DE JANEIRO-CEG,CEGR,3,ON,True,False,False,False,False,False,brapi
+TXRX3,TXRX3.SA,TEXTIL RENAUXVIEW S.A.,TXRX,3,ON,True,False,False,False,False,False,brapi
+AVLL3,AVLL3.SA,ALPHAVILLE S.A.,AVLL,3,ON,True,False,False,False,False,False,brapi
+EKTR4,EKTR4.SA,ELEKTRO REDES S.A.,EKTR,4,PN,False,True,False,False,False,False,brapi
+BGIP3,BGIP3.SA,BCO ESTADO DE SERGIPE S.A. - BANESE,BGIP,3,ON,True,False,False,False,False,False,brapi
+USIM6,USIM6.SA,USINAS SID DE MINAS GERAIS S.A.-USIMINAS,USIM,6,PN,False,True,False,False,False,False,brapi
+AHEB3,AHEB3.SA,SAO PAULO TURISMO S.A.,AHEB,3,ON,True,False,False,False,False,False,brapi
+CGAS3,CGAS3.SA,CIA GAS DE SAO PAULO - COMGAS,CGAS,3,ON,True,False,False,False,False,False,brapi
+BALM4,BALM4.SA,BAUMER S.A.,BALM,4,PN,False,True,False,False,False,False,brapi
+CALI3,CALI3.SA,CONSTRUTORA ADOLPHO LINDENBERG S.A.,CALI,3,ON,True,False,False,False,False,False,brapi
+HBTS5,HBTS5.SA,CIA HABITASUL DE PARTICIPACOES,HBTS,5,PN,False,True,False,False,False,False,brapi
+EUCA3,EUCA3.SA,EUCATEX S.A. INDUSTRIA E COMERCIO,EUCA,3,ON,True,False,False,False,False,False,brapi
+MWET3,MWET3.SA,WETZEL S.A.,MWET,3,ON,True,False,False,False,False,False,brapi
+CRPG6,CRPG6.SA,TRONOX PIGMENTOS DO BRASIL S.A.,CRPG,6,PN,False,True,False,False,False,False,brapi
+BMKS3,BMKS3.SA,BICICLETAS MONARK S.A.,BMKS,3,ON,True,False,False,False,False,False,brapi
