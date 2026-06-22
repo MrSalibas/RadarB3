@@ -1,0 +1,39 @@
+name: B3 Parity Scanner - Alertas
+
+on:
+  schedule:
+    - cron: "*/15 13-21 * * 1-5"
+  workflow_dispatch: {}
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Baixar o projeto
+        uses: actions/checkout@v4
+
+      - name: Instalar o Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Lembrar alertas ja enviados (cooldown)
+        uses: actions/cache@v4
+        with:
+          path: data/alert_cooldown.json
+          key: cooldown-${{ github.run_id }}
+          restore-keys: |
+            cooldown-
+
+      - name: Instalar as dependencias
+        run: pip install -r requirements.txt
+
+      - name: Varrer o mercado e enviar alertas
+        env:
+          TELEGRAM_ENABLED: "true"
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          PAPER_TRADING: "true"
+          ENABLE_LIVE_TRADING: "false"
+        run: python main.py scan
