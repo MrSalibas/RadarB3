@@ -35,7 +35,13 @@ class TelegramAlert:
         self.enabled = env_enabled and cfg_enabled
 
         self.token = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
-        self.chat_id = os.getenv("TELEGRAM_CHAT_ID", "").strip()
+
+        # TELEGRAM_CHAT_ID pode conter VÁRIOS destinos, separados por vírgula
+        # (ou ponto e vírgula). Ex.: "12345678,87654321".
+        raw_chat = os.getenv("TELEGRAM_CHAT_ID", "").strip().replace(";", ",")
+        self.chat_ids = [c.strip() for c in raw_chat.split(",")
+                         if c.strip() and "coloque" not in c]
+
         self.rate_limit_seconds = float(alerts_cfg.get("rate_limit_seconds", 60))
 
         self._last_sent = 0.0
@@ -48,7 +54,7 @@ class TelegramAlert:
         if not self.token or "coloque" in self.token:
             logger.warning("TELEGRAM_BOT_TOKEN não configurado no .env.")
             return False
-        if not self.chat_id or "coloque" in self.chat_id:
+        if not self.chat_ids:
             logger.warning("TELEGRAM_CHAT_ID não configurado no .env.")
             return False
         return True
@@ -68,24 +74,31 @@ class TelegramAlert:
             return False
 
         url = TELEGRAM_API.format(token=self.token)
-        payload = {
-            "chat_id": self.chat_id,
-            "text": message,
-            "parse_mode": "HTML",
-            "disable_web_page_preview": True,
-        }
-        try:
-            resp = requests.post(url, data=payload, timeout=15)
-            if resp.status_code == 200 and resp.json().get("ok"):
-                self._last_sent = time.time()
-                logger.info("Alerta enviado ao Telegram com sucesso.")
-                return True
-            logger.error("Telegram respondeu erro: %s - %s",
-                         resp.status_code, resp.text[:300])
-            return False
-        except Exception as exc:
-            logger.error("Falha ao enviar alerta no Telegram: %s", exc)
-            return False
+        enviados = 0
+        # Envia a MESMA mensagem para cada destino cadastrado.
+        for chat_id in self.chat_ids:
+            payload = {
+                "chat_id": chat_id,
+                "text": message,
+                "parse_mode": "HTML",
+                "disable_web_page_preview": True,
+            }
+            try:
+                resp = requests.post(url, data=payload, timeout=15)
+                if resp.status_code == 200 and resp.json().get("ok"):
+                    enviados += 1
+                else:
+                    logger.error("Telegram erro para %s: %s - %s",
+                                 chat_id, resp.status_code, resp.text[:200])
+            except Exception as exc:
+                logger.error("Falha ao enviar para %s: %s", chat_id, exc)
+
+        if enviados > 0:
+            self._last_sent = time.time()
+            logger.info("Alerta enviado para %d de %d destino(s).",
+                        enviados, len(self.chat_ids))
+            return True
+        return False
 
     def send_test_message(self):
         """Envia uma mensagem de teste (ignora o rate limit)."""
