@@ -2,7 +2,7 @@ name: B3 Parity Scanner - Alertas
 
 on:
   schedule:
-    - cron: "*/15 13-21 * * 1-5"
+    - cron: "7,22,37,52 13-21 * * 1-5"
   workflow_dispatch: {}
 
 jobs:
