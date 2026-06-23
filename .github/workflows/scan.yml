@@ -1,8 +1,9 @@
 name: B3 Parity Scanner - Alertas
 
+# Quando rodar: SOMENTE via despertador externo (cron-job.org) ou botao manual.
+# O agendador nativo do GitHub foi removido por ser instavel e impreciso (UTC).
+# Quem controla o horario agora e o cron-job.org (10h-18h Brasilia, seg-sex).
 on:
-  schedule:
-    - cron: "7,22,37,52 13-21 * * 1-5"
   workflow_dispatch: {}
 
 jobs:
