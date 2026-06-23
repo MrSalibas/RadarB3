@@ -1,0 +1,25 @@
+name: Manter ativo (keepalive)
+
+on:
+  schedule:
+    - cron: "0 12 1,15 * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  keepalive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar o projeto
+        uses: actions/checkout@v4
+
+      - name: Commit automatico de atividade
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          echo "Ultima atividade automatica: $(date -u)" > keepalive.txt
+          git add keepalive.txt
+          git commit -m "keepalive: manter o agendamento ativo" || exit 0
+          git push
