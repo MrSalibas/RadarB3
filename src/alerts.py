@@ -146,7 +146,39 @@ class TelegramAlert:
     # ---------------------------------------------------------------
     @staticmethod
     def format_signal_message(signal, simulation):
-        """Monta a mensagem de alerta a partir do sinal + simulação."""
+        """Monta a mensagem de alerta. Decide entre ENTRADA e SAÍDA."""
+        if signal.get("tipo") == "saida":
+            return TelegramAlert._format_saida(signal)
+        return TelegramAlert._format_entrada(signal, simulation)
+
+    @staticmethod
+    def _format_saida(signal):
+        """Mensagem de SAÍDA: o ratio voltou ao normal, hora de desfazer."""
+        ticker_on = signal.get("ticker_on", "?")
+        ticker_pn = signal.get("ticker_pn", "?")
+        vender = signal.get("ativo_vender", "?")
+        comprar = signal.get("ativo_comprar", "?")
+        linhas = [
+            "✅ <b>PARIDADE NORMALIZADA — hora de SAIR</b>",
+            "",
+            f"<b>Par:</b> {ticker_on} / {ticker_pn}",
+            f"O ratio voltou para perto da média (z-score ≈ {signal.get('z_score')}).",
+            "",
+            "<b>Se você fez a troca, agora é a hora de DESFAZER:</b>",
+            f"  • Vender: {vender}",
+            f"  • Comprar: {comprar}",
+            "",
+            f"<b>Ratio atual:</b> {signal.get('ratio_atual')}",
+            f"<b>Média do ratio:</b> {signal.get('media_ratio')}",
+            f"<b>Z-score:</b> {signal.get('z_score')}",
+            "",
+            "Desfazendo agora, você embolsa o ganho em ações da ida e volta.",
+        ]
+        return "\n".join(linhas)
+
+    @staticmethod
+    def _format_entrada(signal, simulation):
+        """Mensagem de ENTRADA: as ações se afastaram, hora de trocar."""
         ticker_on = signal.get("ticker_on", "?")
         ticker_pn = signal.get("ticker_pn", "?")
         z = signal.get("z_score")
@@ -162,7 +194,6 @@ class TelegramAlert:
         comprar = signal.get("ativo_comprar", "?")
 
         sim = simulation or {}
-        capital = 0.0
         qtd_vend = sim.get("quantidade_vendida", 0)
         qtd_comp = sim.get("quantidade_comprada", 0)
         ganho_acoes = sim.get("ganho_liquido_acoes", 0)
@@ -184,7 +215,7 @@ class TelegramAlert:
             f"<b>Média do ratio:</b> {media}",
             f"<b>Z-score:</b> {z}",
             "",
-            "<b>Simulação:</b>",
+            "<b>Simulação (base R$ 20.000):</b>",
             f"  • Quantidade vendida: {qtd_vend}",
             f"  • Quantidade comprada: {qtd_comp}",
             f"  • Ganho estimado: +{ganho_acoes} ações",
@@ -192,8 +223,18 @@ class TelegramAlert:
             "",
             f"<b>Custos estimados:</b> R$ {custo}",
             f"<b>Imposto estimado:</b> R$ {imposto}",
-            "",
-            f"<b>Decisão:</b> {signal.get('decisao', '')}",
-            f"<b>Motivo:</b> {signal.get('motivo', '')}",
         ]
+
+        # Recomendação do backtest + aviso se o histórico for ruim.
+        rec = str(signal.get("recomendacao", "") or "").upper()
+        if rec and rec != "N/D":
+            linhas.append("")
+            linhas.append(f"<b>Histórico (backtest):</b> {rec}")
+            if rec == "EVITAR":
+                linhas.append("⚠️ <b>ATENÇÃO:</b> este par tem histórico RUIM de "
+                              "reversão. Avalie com cuidado redobrado.")
+
+        linhas.append("")
+        linhas.append(f"<b>Decisão:</b> {signal.get('decisao', '')}")
+        linhas.append(f"<b>Motivo:</b> {signal.get('motivo', '')}")
         return "\n".join(linhas)

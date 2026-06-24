@@ -41,7 +41,7 @@ strategy:
   alert_cooldown_minutes: 30
 
 simulation:
-  capital_inicial: 50000
+  capital_inicial: 20000
   usar_lote_fracionario: true
   lote_padrao: 100
   corretagem: 0

@@ -1,16 +1,15 @@
 """
 Motor de sinais.
 
-NÃO basta o z-score passar de 2 para alertar. Antes do alerta, o sinal passa
-por vários filtros:
- - liquidez suficiente (já garantida na lista de pares filtrados);
- - custo estimado;
- - slippage estimado;
- - imposto estimado;
- - ganho mínimo de ações;
- - ganho líquido positivo;
- - confirmação (janela maior reduz ruído);
- - cooldown (evita alertas repetidos no mesmo par em intervalo curto).
+NÃO basta o z-score passar de 2 para alertar. Antes do alerta de ENTRADA, o
+sinal passa por vários filtros (liquidez, custo, slippage, imposto, ganho
+mínimo, ganho líquido positivo, distância mínima e cooldown).
+
+Além da ENTRADA (quando as ações se afastam), o motor também avisa a SAÍDA
+(quando o ratio volta para perto da média) — a hora de desfazer a troca.
+
+Pares com histórico ruim no backtest NÃO são ignorados: o alerta é enviado
+mesmo assim, mas com um aviso de que a recomendação histórica é ruim.
 
 evaluate_pair() devolve um dicionário com a decisão final.
 """
@@ -19,6 +18,8 @@ import json
 import os
 import time
 from datetime import datetime
+
+import pandas as pd
 
 from src import get_paths
 from src.logger import get_logger
@@ -29,11 +30,13 @@ from src.tax import TaxEstimator
 
 logger = get_logger()
 
+ENTRY_SIGNALS = ("VENDER_PN_COMPRAR_ON", "VENDER_ON_COMPRAR_PN")
+
 
 class SignalEngine:
-    """Avalia pares e decide se vale um alerta."""
+    """Avalia pares e decide se vale um alerta de entrada ou de saída."""
 
-    def __init__(self, config, provider=None, cooldown_file=None):
+    def __init__(self, config, provider=None, state_file=None):
         self.config = config
         self.provider = provider or MarketDataProvider()
         self.tax = TaxEstimator(config)
@@ -49,46 +52,91 @@ class SignalEngine:
         self.period = ds["historical_period"]
         self.interval = ds["historical_interval"]
 
-        # Cooldown persistido em disco: assim a rotina (várias execuções
-        # separadas) não repete o mesmo alerta a cada varredura.
         paths = get_paths(config)
-        self.cooldown_file = cooldown_file or os.path.join(
+        # Estado persistido (cooldown + posições abertas) num único arquivo.
+        # Assim a rotina (várias execuções separadas) não repete alertas e
+        # consegue avisar a saída de uma distorção aberta antes.
+        self.state_file = state_file or os.path.join(
             paths["data_dir"], "alert_cooldown.json")
-        self._ultimo_alerta = self._load_cooldown()
+        self._state = self._load_state()
+
+        # Recomendação do backtest por par (RECOMENDADO / NEUTRO / EVITAR).
+        self._recomendacoes = self._carregar_recomendacoes(paths)
 
     # ---------------------------------------------------------------
-    def _load_cooldown(self):
+    # Persistência de estado
+    # ---------------------------------------------------------------
+    def _load_state(self):
+        estado = {"cooldown": {}, "abertas": {}}
         try:
-            if os.path.exists(self.cooldown_file):
-                with open(self.cooldown_file, "r", encoding="utf-8") as f:
-                    return json.load(f)
+            if os.path.exists(self.state_file):
+                with open(self.state_file, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                if isinstance(data, dict):
+                    if "cooldown" in data or "abertas" in data:
+                        estado["cooldown"] = data.get("cooldown", {})
+                        estado["abertas"] = data.get("abertas", {})
+                    else:
+                        # Formato antigo (plano) = só cooldown.
+                        estado["cooldown"] = data
         except Exception as exc:
-            logger.warning("Não foi possível ler o cooldown: %s", exc)
-        return {}
+            logger.warning("Não foi possível ler o estado: %s", exc)
+        return estado
 
-    def _save_cooldown(self):
+    def _save_state(self):
         try:
-            with open(self.cooldown_file, "w", encoding="utf-8") as f:
-                json.dump(self._ultimo_alerta, f)
+            with open(self.state_file, "w", encoding="utf-8") as f:
+                json.dump(self._state, f)
         except Exception as exc:
-            logger.warning("Não foi possível salvar o cooldown: %s", exc)
+            logger.warning("Não foi possível salvar o estado: %s", exc)
 
+    # --- cooldown ---
     def _em_cooldown(self, chave):
-        ultimo = self._ultimo_alerta.get(chave)
+        ultimo = self._state["cooldown"].get(chave)
         if ultimo is None:
             return False
-        decorrido = time.time() - ultimo
-        return decorrido < self.cooldown_minutes * 60
+        return (time.time() - ultimo) < self.cooldown_minutes * 60
 
     def _marca_alerta(self, chave):
-        self._ultimo_alerta[chave] = time.time()
-        self._save_cooldown()
+        self._state["cooldown"][chave] = time.time()
+        self._save_state()
+
+    # --- posições abertas ---
+    def _posicao_aberta(self, chave):
+        return self._state["abertas"].get(chave)
+
+    def _abrir_posicao(self, chave, side, ratio):
+        self._state["abertas"][chave] = {
+            "side": side, "ratio_entrada": ratio, "ts": time.time()}
+        self._save_state()
+
+    def _fechar_posicao(self, chave):
+        self._state["abertas"].pop(chave, None)
+        self._save_state()
+
+    # ---------------------------------------------------------------
+    def _carregar_recomendacoes(self, paths):
+        """Lê data/ranking_pares.csv (se existir) -> {(on, pn): recomendacao}."""
+        rec = {}
+        try:
+            if os.path.exists(paths["ranking"]):
+                df = pd.read_csv(paths["ranking"])
+                for _, r in df.iterrows():
+                    chave = (str(r.get("ticker_on", "")),
+                             str(r.get("ticker_pn", "")))
+                    rec[chave] = str(r.get("recomendacao", "N/D"))
+        except Exception as exc:
+            logger.warning("Não foi possível ler o ranking: %s", exc)
+        return rec
+
+    def _recomendacao(self, ticker_on, ticker_pn):
+        return self._recomendacoes.get((str(ticker_on), str(ticker_pn)), "N/D")
 
     # ---------------------------------------------------------------
     def evaluate_pair(self, pair):
         """
-        Avalia um par (dict ou linha de DataFrame com ticker_on/ticker_pn).
-        Devolve (signal, simulation). 'signal' sempre é um dict.
+        Avalia um par. Devolve (signal, simulation).
+        signal["tipo"] = "entrada" ou "saida" quando alertar=True.
         """
         ticker_on = str(pair["ticker_on"])
         ticker_pn = str(pair["ticker_pn"])
@@ -103,6 +151,8 @@ class SignalEngine:
             "media_ratio": None,
             "z_score": None,
             "sinal": "SEM_SINAL",
+            "tipo": "entrada",
+            "recomendacao": "",
             "ativo_vender": "",
             "ativo_comprar": "",
             "decisao": "ignorar",
@@ -133,7 +183,6 @@ class SignalEngine:
         if preco_pn and preco_on and preco_on > 0:
             ratio_atual = preco_pn / preco_on
         else:
-            # Cai para o último ponto histórico.
             preco_pn = float(pn_hist.iloc[-1]) if not pn_hist.empty else None
             preco_on = float(on_hist.iloc[-1]) if not on_hist.empty else None
 
@@ -150,7 +199,8 @@ class SignalEngine:
             signal["decisao"] = "sem_dados"
             return signal, None
 
-        sinal = classify_signal(stats["z_score"], self.entry_zscore, self.exit_zscore)
+        sinal = classify_signal(stats["z_score"], self.entry_zscore,
+                                self.exit_zscore)
 
         signal.update({
             "ratio_atual": round(stats["ratio_atual"], 6),
@@ -161,8 +211,31 @@ class SignalEngine:
             "preco_pn": preco_pn,
         })
 
+        # ============================================================
+        # SAÍDA: se há posição aberta neste par e o ratio voltou para
+        # perto da média, avisa a hora de desfazer a troca.
+        # ============================================================
+        aberta = self._posicao_aberta(chave)
+        if aberta and abs(stats["z_score"]) < self.exit_zscore:
+            side_entrada = aberta.get("side")
+            # Para desfazer, inverte a operação da entrada.
+            if side_entrada == "VENDER_PN_COMPRAR_ON":
+                signal["ativo_vender"], signal["ativo_comprar"] = ticker_on, ticker_pn
+            else:
+                signal["ativo_vender"], signal["ativo_comprar"] = ticker_pn, ticker_on
+            self._fechar_posicao(chave)
+            signal["tipo"] = "saida"
+            signal["alertar"] = True
+            signal["decisao"] = "saida_normalizada"
+            signal["motivo"] = ("o ratio voltou para perto da média — "
+                                "hora de desfazer a troca")
+            return signal, None
+
+        # ============================================================
+        # ENTRADA
+        # ============================================================
         # 3) Só seguem adiante sinais de entrada.
-        if sinal not in ("VENDER_PN_COMPRAR_ON", "VENDER_ON_COMPRAR_PN"):
+        if sinal not in ENTRY_SIGNALS:
             signal["motivo"] = "z-score dentro da faixa neutra"
             signal["decisao"] = "ignorar"
             return signal, None
@@ -209,6 +282,7 @@ class SignalEngine:
             simulation["custo_operacional"] + simulation["slippage_estimado"], 2)
         signal["imposto_estimado"] = simulation["imposto_estimado"]
         signal["ganho_liquido_acoes"] = simulation["ganho_liquido_acoes"]
+        signal["recomendacao"] = self._recomendacao(ticker_on, ticker_pn)
 
         # 5) Decisão final.
         if not simulation["compensa"]:
@@ -221,8 +295,10 @@ class SignalEngine:
             signal["motivo"] = "alerta recente para este par (cooldown ativo)"
             return signal, simulation
 
-        # Aprovado: pode alertar.
+        # Aprovado: alerta de ENTRADA e marca a posição como aberta.
         self._marca_alerta(chave)
+        self._abrir_posicao(chave, sinal, stats["ratio_atual"])
+        signal["tipo"] = "entrada"
         signal["decisao"] = "oportunidade_valida"
         signal["alertar"] = True
         signal["motivo"] = ("z-score extremo com ganho líquido positivo "
